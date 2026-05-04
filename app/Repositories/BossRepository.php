@@ -7,12 +7,12 @@ use App\Models\Boss;
 class BossRepository implements BossRepositoryInterface {
     public function all()
     {
-        return Boss::all('name');
+        return Boss::all('id','name','email');
 
     }
     public function find(int $id)
     {
-        return Boss::findOrFail($id);
+        return Boss::find($id);
     }
 
     public function create(array $data)

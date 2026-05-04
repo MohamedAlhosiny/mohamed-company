@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/{id}' , [BossControllerTest::class , 'show']);
 Route::post('/' , [BossControllerTest::class , 'store']);
+Route::get('/' , [BossControllerTest::class , 'index']);
+Route::post('/{id}' , [BossControllerTest::class , 'update']);
